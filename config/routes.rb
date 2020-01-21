@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   get 'term/:id', to: "terms#show", as: "term"
   # get 'terms/create'
   
-  # get 'users/index'
-  # get 'users/show'
-  # get 'users/new'
+  get 'users', to: "users#index", as: "users"
+  get 'signup', to: "users#new", as: "user_new"
+  get 'users/:id', to: "users#show", as: "user"
+  post 'users', to: "users#create", as: "create_user"
   # get 'users/edit'
 
 end
