@@ -11,6 +11,7 @@
 #
 
 class User < ApplicationRecord
+  has_secure_password
   has_many :user_terms
   has_many :terms, through: :user_terms
 

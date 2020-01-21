@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   post 'users', to: "users#create", as: "create_user"
   # get 'users/edit'
 
+#  get 'codedictionary'
+# we want users to enter through the above link
 end
