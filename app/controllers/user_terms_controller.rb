@@ -1,0 +1,3 @@
+class UserTermsController < ApplicationController
+
+end
