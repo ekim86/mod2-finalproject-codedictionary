@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   post 'users', to: "users#create", as: "create_user"
   # get 'users/edit'
 
+  # get 'profile', to: "sessions#create"
+  # get 'login', to: "users#profile"
+
+  # get 'codedictionary'
+  # we want people to enter through this site
 end

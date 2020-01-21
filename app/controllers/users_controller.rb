@@ -16,4 +16,18 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def profile
+    render 'profile'
+  end
+
+  def create
+    redirect_to @user
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :password)
+  end
+
 end
