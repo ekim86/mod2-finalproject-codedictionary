@@ -1,10 +1,10 @@
 class LanguagesController < ApplicationController
-  before_action :logged_in?
+  before_action :authorized?
 
   def index
     @languages = Language.all
   end
-
+  
   def user_index
     @languages = current_user.languages
   end

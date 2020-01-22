@@ -2,11 +2,12 @@ class TermsController < ApplicationController
   before_action :logged_in?
 
   def index
-    @terms = Term.all
+    # @terms = Term.all
+    @terms = current_user.terms
   end
-
-  def user_index
-    @terms = current_users.terms
+  
+  def show
+    @term = Term.find(params[:id])
   end
 
 
