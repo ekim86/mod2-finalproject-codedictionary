@@ -1,5 +1,5 @@
-Login
-<br><br>
+<h1>Login<h1>
+<p>
 <% if flash[:errors] %>
 <% flash[:errors].each do |error| %>
 <%= error %>
@@ -13,3 +13,4 @@ Login
   <%= submit_tag :Submit %><br>
 <% end %>
 <%= button_to "CodeDictionary", codedictionary_path, method: :get %>
+</p>

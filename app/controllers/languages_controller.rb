@@ -14,5 +14,18 @@ class LanguagesController < ApplicationController
     @user = current_user
   end
 
+  def favorite
+    # byebug
+    @language = Language.find(params[:id])
+    type = params[:type]
+    if type == "favorite"
+      current_user.favorite_languages << @language
+      redirect_to user_path(current_user), notice: "Favorited #{@language.name}"
+    elsif type == "unfavorite"
+      current_user.favorite_languages.delete(@language)
+      redirect_to user_path(current_user), notice: "Unfavorited #{@language.name}"
+    end
+
+  end
 
 end
