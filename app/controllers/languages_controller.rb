@@ -3,6 +3,8 @@ class LanguagesController < ApplicationController
 
   def index
     @languages = Language.all
+    # @languages = Language.search(params[:search])
+    @user = current_user
   end
   
   def user_index
@@ -25,7 +27,11 @@ class LanguagesController < ApplicationController
       current_user.favorite_languages.delete(@language)
       redirect_to user_path(current_user), notice: "Unfavorited #{@language.name}"
     end
-
   end
+
+  # private
+  # def language_params
+  #   params.require(:language).permit(:name, :search)
+  # end
 
 end

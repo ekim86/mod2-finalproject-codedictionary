@@ -23,6 +23,27 @@ t1 = Term.create!(name: "select", content: "Returns an array containing
 t2 = Term.create!(name: "map", content: "Returns a new array with the 
   results of running block once for every element in enum. If no block 
   is given, an enumerator is returned instead.", language: l1)
+t3 = Term.create!(name: "", content: "", language: l1)
+t4 = Term.create!(name: "", content: "", language: l1)
+t5 = Term.create!(name: "", content: "", language: l1)
+t6 = Term.create!(name: "", content: "", language: l1)
+t7 = Term.create!(name: "", content: "", language: l1)
+t8 = Term.create!(name: "", content: "", language: l1)
+t9 = Term.create!(name: "", content: "", language: l1)
+t10 = Term.create!(name: "", content: "", language: l1)
+
+t11 = Term.create!(name: "", content: "", language: l2)
+t12 = Term.create!(name: "", content: "", language: l2)
+t13 = Term.create!(name: "", content: "", language: l2)
+t14 = Term.create!(name: "", content: "", language: l2)
+t15 = Term.create!(name: "", content: "", language: l2)
+t16 = Term.create!(name: "", content: "", language: l2)
+t17 = Term.create!(name: "", content: "", language: l2)
+t18 = Term.create!(name: "", content: "", language: l2)
+t19 = Term.create!(name: "", content: "", language: l2)
+t20 = Term.create!(name: "", content: "", language: l2)
+  
+
 
 UserTerm.create!(user: u1, term: t1)
 UserTerm.create!(user: u1, term: t2)

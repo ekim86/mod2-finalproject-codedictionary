@@ -1,4 +1,4 @@
-<h1><%= @term.name %></h1>
+<h2><%= @term.name %></h2>
 <p><%= @term.content %>
 <br>
 <br>
@@ -8,4 +8,6 @@
   <%= button_to "Add Term", bookmark_term_path(@term, type: "add"), method: :put %>
 <% end %>
 <br>
-<%= button_to "All Terms", terms_path, method: :get %></p>
+<%= button_to "All Terms", terms_path, method: :get %>
+<%= button_to "My Profile", user_path(@user), method: :get %>
+</p>

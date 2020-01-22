@@ -1,17 +1,11 @@
-<h1><%= @user.name %>'s Personal CodeDictionary</h1>
+<h2><%= @user.name.capitalize %>'s Profile</h2>
+<p>
+<%= link_to "#{@user.name.capitalize}'s Dictionary", dictionary_path(@user) %>
 <br><br>
-<% @user.terms.each do |term| %>
-<%= link_to term.name, term_path(term), method: :get %><br>
-<%= term.content %><br><br>
-<% end %>
-<br>
-<br>
-<% @user.favorite_languages.each do |fav_language| %>
-<%= fav_language.name %>
-<%= button_to "Unfavorite", favorite_language_path(fav_language, type: "unfavorite"), method: :put %><br><br>
-<% end %>
+<%= link_to "#{@user.name.capitalize}'s Favorite Language(s)", favorite_path(@user) %>
 <br>
 <br>
 <%= button_to "All Languages", languages_path, method: :get %>
 <%= button_to "All Terms", terms_path, method: :get %>
 <%= button_to "Log Out", logout_path, method: :get %>
+</p>

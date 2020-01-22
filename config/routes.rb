@@ -13,10 +13,14 @@ Rails.application.routes.draw do
   # user profile
   post '/users', to: "users#create"
   # get 'users/edit'
+  get '/dictionary/:id', to: "users#dictionary", as: "dictionary"
+  get '/favlanguage/:id', to: "users#favorite", as: "favorite"
+
 
   get '/codedictionary', to: "sessions#welcome", as: "codedictionary"
   # we want users to enter through the above link
 
+  post '/terms', to: "terms#create"
 
   get '/login', to: "sessions#new", as: "login"
   post '/login', to: "sessions#create"
