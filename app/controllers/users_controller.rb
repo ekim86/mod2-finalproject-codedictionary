@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in?, except: [:new, :create]
+  before_action :authorized?, except: [:new, :create]
   
   def index
     @users = User.all
@@ -21,6 +21,14 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+  end
+
+  def dictionary
+    @user = current_user
+  end
+
+  def favorite
+    @user = current_user
   end
 
   # def update 

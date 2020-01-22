@@ -1,4 +1,11 @@
-<h1>Terms</h1><br>
+<h2>All Terms</h2>
+<p>
 <% @terms.each do |term| %>
 <%= link_to term.name, term_path(term), method: :get %><br>
 <% end %>
+<!--- <%= link_to "Back to Your Page", :back %>
+<%= button_to "Back", :back, method: :get %> don't need a back button--->
+<%= button_to "My Profile", user_path(@user), method: :get %>
+</p>
+
+

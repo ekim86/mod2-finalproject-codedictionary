@@ -1,0 +1,6 @@
+<h2><%= @user.name %>'s Favorite Language(s)</h2>
+<% @user.favorite_languages.each do |fav_language| %>
+<%= fav_language.name %>
+<%= button_to "Unfavorite", favorite_language_path(fav_language, type: "unfavorite"), method: :put %><br><br>
+<% end %>
+<%= button_to "My Profile", user_path(@user), method: :get %>

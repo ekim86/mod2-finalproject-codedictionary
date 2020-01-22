@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  # before_action :logged_in?
+  before_action :logged_in?
 
   def new 
   end
@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to 'login'
+    redirect_to '/codedictionary'
   end
 end
