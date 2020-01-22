@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get '/languages', to: "languages#index", as: "languages"
   # get '/language/:id', to: "languages#show", as: "language"
   
-  get '/term/:id', to: "terms#show", as: "term"
+  # get '/term/:id', to: "terms#show", as: "term"
   # get 'terms/create'
   
   get '/signup', to: "users#new", as: "signup"
@@ -23,6 +23,10 @@ Rails.application.routes.draw do
 
   resources :languages do
     put :favorite, on: :member
+  end
+
+  resources :terms do
+    put :bookmark, on: :member
   end
   
 

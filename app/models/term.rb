@@ -14,5 +14,4 @@ class Term < ApplicationRecord
   belongs_to :language
   has_many :user_terms
   has_many :users, through: :user_terms
-  
 end
