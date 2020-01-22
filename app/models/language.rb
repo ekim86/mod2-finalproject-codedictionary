@@ -10,5 +10,7 @@
 
 class Language < ApplicationRecord
   has_many :terms
+  has_many :favorites
+  has_many :users, through: :favorites 
   
 end

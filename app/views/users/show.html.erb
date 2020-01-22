@@ -4,3 +4,11 @@
 <%= link_to term.name, term_path(term), method: :get %><br>
 <%= term.content %><br><br>
 <% end %>
+<br>
+<br>
+<% @user.favorite_languages.each do |fav_language| %>
+<%= fav_language.name %><br>
+<% end %>
+<br>
+<br>
+<%= button_to "All Languages", languages_path, method: :get %>

@@ -13,7 +13,9 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :user_terms
+  has_many :favorites
   has_many :terms, through: :user_terms
+  has_many :favorite_languages, through: :favorites, source: :language
 
   
 end

@@ -3,4 +3,6 @@
 <%= @language.name %>
 <br>
 <br>
+<%= button_to "Add to Favorites", favorite_language_path(@language), method: :put %>
+<br>
 <%= button_to "All Languages", languages_path, method: :get %>
