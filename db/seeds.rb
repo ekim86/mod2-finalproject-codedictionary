@@ -10,8 +10,8 @@ UserTerm.destroy_all
 Term.destroy_all
 Language.destroy_all
 
-u1 = User.create!(name: "Brinda", username: "b", password_digest: "1234")
-u2 = User.create!(name: "Eunice", username: "e", password_digest: "1234")
+u1 = User.create!(name: "Brinda", username: "b", password: "1234")
+u2 = User.create!(name: "Eunice", username: "e", password: "1234")
 
 l1 = Language.create!(name: "Ruby")
 l2 = Language.create!(name: "JavaScript")

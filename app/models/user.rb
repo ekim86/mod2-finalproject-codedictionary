@@ -16,6 +16,4 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :terms, through: :user_terms
   has_many :favorite_languages, through: :favorites, source: :language
-
-  
 end

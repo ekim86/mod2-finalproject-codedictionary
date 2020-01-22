@@ -1,8 +1,6 @@
-<h1>Languages#show</h1>
-<p>Find me in app/views/languages/show.html.erb</p>
-<%= @language.name %>
+<h1><%= @language.name %></h1>
 <br>
 <br>
-<%= button_to "Add to Favorites", favorite_language_path(@language), method: :put %>
+<%= button_to "Add to Favorites", favorite_language_path(@language, type: "favorite"), method: :put %>
 <br>
 <%= button_to "All Languages", languages_path, method: :get %>
