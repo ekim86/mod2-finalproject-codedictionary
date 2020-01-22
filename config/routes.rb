@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   resources :terms do
     put :bookmark, on: :member
   end
-  post '/terms', to: "terms#create"
+  # post '/terms', to: "terms#create"
   # get "/terms", to: "terms#index"
   # get '/term/:id', to: "terms#show", as: "term"
   # get 'terms/create'
