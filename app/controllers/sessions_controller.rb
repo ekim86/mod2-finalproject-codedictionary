@@ -1,22 +1,23 @@
 class SessionsController < ApplicationController
-  
-  def new
+
+  def new 
   end
 
-  def create
-    user = User.find_by(username: params[:username])
+  def create 
+    user = User.find_by(username: params[:user][:username])
     
-    if user && user.authenticate(params[:password])
-      session[:user] = user.id
-      redirect_to "/profile"
+    if user && user.authenticate(params[:user][:password])
+      session[:user_id] = user.id
+      redirect_to "/users/#{user.id}"
     else
-      redirect_to "/login"
+      flash[:errors] = ["🚫👎WOMP... WOMP... Try again ☹️"] 
+      redirect_to '/login'
     end
-    
   end
 
   def destroy
-    session.delete(:user)
+    session[:user_id] = nil
+    redirect_to 'login'
   end
 
 end
