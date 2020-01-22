@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # get '/languages', to: "languages#index", as: "languages"
   # get '/language/:id', to: "languages#show", as: "language"
   
+  # get "/terms", to: "terms#index"
   # get '/term/:id', to: "terms#show", as: "term"
   # get 'terms/create'
   
@@ -21,8 +22,8 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   # delete '/users/:id', to: "sessions#destroy", as: "logout"
 
-  # delete '/logout', to: 'sessions#destroy'
-  # get '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy', as: "logout"
+  get '/logout', to: 'sessions#destroy'
 
   resources :languages do
     put :favorite, on: :member
