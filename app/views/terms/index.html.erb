@@ -1,0 +1,4 @@
+<h1>Terms</h1><br>
+<% @terms.each do |term| %>
+<%= link_to term.name, term_path(term), method: :get %><br>
+<% end %>
