@@ -24,13 +24,7 @@ Rails.application.routes.draw do
   # delete '/logout', to: 'sessions#destroy'
   # get '/logout', to: 'sessions#destroy'
 
-  resources :languages do
-    put :favorite, on: :member
-  end
 
-  resources :terms do
-    put :bookmark, on: :member
-  end
   
 
 end
