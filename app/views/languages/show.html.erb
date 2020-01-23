@@ -1,12 +1,12 @@
 <h2><%= @language.name %></h2>
+<%= button_to "Add Language to Favorites", favorite_language_path(@language, type: "favorite"), method: :put %>
 <p>
 <% @language.terms.each do |term| %>
 <%= link_to term.name, term_path(term), method: :get %><br>
 <% end %>
 <br>
 <br>
-<%= button_to "Add to Favorites", favorite_language_path(@language, type: "favorite"), method: :put %>
 <%= button_to "All Languages", languages_path, method: :get %>
-<%= button_to "Your Page", user_path(@user), method: :get %>
+<%= button_to "My Profile", user_path(@user), method: :get %>
 </p>
 

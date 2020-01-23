@@ -16,4 +16,7 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :terms, through: :user_terms
   has_many :favorite_languages, through: :favorites, source: :language
+  validates :password, presence: true#, length: { minimum: 6 }
+  validates :username, presence: true, uniqueness: { case_sensitve: false }
+
 end
