@@ -23,7 +23,9 @@ class UsersController < ApplicationController
       redirect_to user_path(user)
     else
       flash[:errors] = user.errors.full_messages
-      redirect_to '/signup'
+      # redirect_to '/signup'
+      redirect_to signup_path
+      # can use name_path or '/name'
     end
 
   end
